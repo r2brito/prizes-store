@@ -1,0 +1,30 @@
+{
+  "products": [
+    {
+      "name": "Suco de Laranja",
+      "points": 5
+    },
+    {
+      "name": "10% de desconto",
+      "points": 10
+    },
+    {
+      "name": "Almoço Especial",
+      "points": 20
+    }
+  ],
+  "users": [
+    {
+      "username": "user1",
+      "email": "user1@example.com",
+      "password": "P@ssw0rd",
+      "balance": 20
+    },
+    {
+      "username": "user2",
+      "email": "user2@example.com",
+      "password": "P@ssw0rd",
+      "balance": 100
+    }
+  ]
+}
