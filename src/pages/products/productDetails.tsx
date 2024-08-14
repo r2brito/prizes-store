@@ -7,7 +7,6 @@ import {
   Typography,
   Button,
   Stack,
-  Divider,
   Card,
 } from "@mui/material";
 
@@ -16,7 +15,6 @@ import axios from "../../utils/axios";
 import { useCart } from "../../hooks/useCart";
 import Image from "../../components/image";
 import Iconify from "../../components/icon";
-import { useAuth } from "../../hooks/useAuth";
 import { toast } from "react-toastify";
 import CartWidget from "../../sections/widget";
 
@@ -77,6 +75,7 @@ export default function ProductDetails() {
         toast.warn("Esse item já está no seu carrinho.");
       } else {
         addProduct(product);
+        toast.success("Produto adicionado ao carrinho.");
       }
     }
   };
