@@ -112,6 +112,7 @@ A aplicação estará disponível em http://localhost:3000.
 4. **Rodar Servidor:**
 
 - A aplicação está usando o json-server para simular um servidor com os dados dos produtos e usuários:
+- O servidor está disponível em http://localhost:3333.
 
 ```bash
 yarn server
