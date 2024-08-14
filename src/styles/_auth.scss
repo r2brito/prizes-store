@@ -1,0 +1,45 @@
+@import "variables";
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $background-color;
+}
+
+.login-form {
+  width: 100%;
+  padding: 2 * $spacing-unit;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  &__title {
+    margin-bottom: 1.5 * $spacing-unit;
+    color: $primary-color;
+    text-align: center;
+  }
+
+  &__input {
+    margin-bottom: $spacing-unit;
+  }
+
+  &__button {
+    margin-top: 1.5 * $spacing-unit;
+  }
+
+  &__forgot-password {
+    margin-top: $spacing-unit;
+    text-align: center;
+
+    a {
+      color: $primary-color;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

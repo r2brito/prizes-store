@@ -2,29 +2,38 @@
   "products": [
     {
       "name": "Suco de Laranja",
-      "points": 5
+      "points": 5,
+      "id": "791c",
+      "cover": "https://picsum.photos/seed/picsum/200/300"
     },
     {
       "name": "10% de desconto",
-      "points": 10
+      "points": 10,
+      "id": "cb1f",
+      "cover": "https://picsum.photos/seed/picsum/200/300"
     },
     {
       "name": "Almoço Especial",
-      "points": 20
+      "points": 20,
+      "id": "51f3",
+      "cover": "https://picsum.photos/seed/picsum/200/300"
     }
   ],
   "users": [
     {
-      "username": "user1",
-      "email": "user1@example.com",
+      "name": "user",
+      "email": "user@example.com",
       "password": "P@ssw0rd",
-      "balance": 20
+      "balance": 20,
+      "id": "5f36"
     },
     {
-      "username": "user2",
+      "name": "user2",
       "email": "user2@example.com",
       "password": "P@ssw0rd",
-      "balance": 100
+      "balance": 100,
+      "id": "1be3"
     }
-  ]
+  ],
+  "orders": []
 }

@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Suspense } from "react";
+import { ToastContainer } from "react-toastify";
 
-function App() {
+import "react-toastify/dist/ReactToastify.css";
+
+import { AuthProvider } from "./context/AuthContext";
+import { CartProvider } from "./context/CartContext";
+import AppRoutes from "./routes";
+
+import "./styles/app.scss";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthProvider>
+      <CartProvider>
+        <Suspense fallback={<div>Loading...</div>}>
+          <AppRoutes />
+          <ToastContainer autoClose={3000} />
+        </Suspense>
+      </CartProvider>
+    </AuthProvider>
   );
-}
+};
 
 export default App;
