@@ -26,11 +26,9 @@ const RootStyle = styled(RouterLink)(({ theme }) => ({
 export default function CartWidget() {
   const { cart } = useCart();
 
-  const total = sum(cart.map((cartItem) => cartItem.points));
-
   return (
     <RootStyle to={"/main/cart"}>
-      <Badge showZero badgeContent={total} color="error" max={99}>
+      <Badge showZero badgeContent={cart.length} color="error" max={99}>
         <Iconify icon="eva:shopping-cart-fill" width={24} height={24} />
       </Badge>
     </RootStyle>

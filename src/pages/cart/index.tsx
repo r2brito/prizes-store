@@ -27,18 +27,22 @@ export default function CheckoutCart() {
   const payment = Number(user?.balance) - Number(total);
   const handleCheckout = async () => {
     try {
-      const newOrder = {
-        // @ts-ignore
-        userId: user.id,
-        items: cart,
-        total,
-      };
+      if (Number(user?.balance) >= total) {
+        const newOrder = {
+          // @ts-ignore
+          userId: user.id,
+          items: cart,
+          total,
+        };
 
-      await axios.post("/orders", newOrder);
-      toast.success("Pedido Finalizado com Sucesso!");
-      updateBalance(payment);
-      clearCart();
-      navigate("/main/products");
+        await axios.post("/orders", newOrder);
+        toast.success("Pedido Finalizado com Sucesso!");
+        updateBalance(payment);
+        clearCart();
+        navigate("/main/products");
+      } else {
+        toast.error("Você não possui pontos suficientes!");
+      }
     } catch (error) {
       console.error(error);
     }
